@@ -87,6 +87,22 @@
     <div class="grid" id="cards"></div>
   </section>
 
+  <!-- SET FRA TOPPEN: billeder taget oppefra, på arbejde i højden -->
+  <section id="toppen" class="section">
+    <h2>Set fra toppen</h2>
+    <p class="lead">Udsigten fra arbejdspladsen.</p>
+    <div class="top-strip">
+      <figure><img class="media" src="img/etp-1.jpg" alt="Udsigt fra højden: Orange Scene, Roskilde" loading="lazy" data-i="0"><figcaption>Orange Scene, Roskilde</figcaption></figure>
+      <figure><img class="media" src="img/sitecover-2.jpg" alt="Udsigt fra højden: SiteCover" loading="lazy" data-i="1"><figcaption>SiteCover</figcaption></figure>
+      <figure><img class="media" src="img/sitecover-4.jpg" alt="Udsigt fra højden: SiteCover" loading="lazy" data-i="2"><figcaption>SiteCover</figcaption></figure>
+      <figure><img class="media" src="img/etp-4.jpg" alt="Udsigt fra højden: Orange Scene, Roskilde" loading="lazy" data-i="3"><figcaption>Orange Scene, Roskilde</figcaption></figure>
+      <figure><img class="media" src="img/sitecover-9.jpg" alt="Udsigt fra højden: SiteCover" loading="lazy" data-i="4"><figcaption>SiteCover</figcaption></figure>
+      <figure><img class="media" src="img/sitecover-3.jpg" alt="Udsigt fra højden: SiteCover" loading="lazy" data-i="5"><figcaption>SiteCover</figcaption></figure>
+      <figure><img class="media" src="img/sitecover-24.jpg" alt="Udsigt fra højden: SiteCover" loading="lazy" data-i="6"><figcaption>SiteCover</figcaption></figure>
+      <figure><img class="media" src="img/sitecover-12.jpg" alt="Udsigt fra højden: SiteCover" loading="lazy" data-i="7"><figcaption>SiteCover</figcaption></figure>
+    </div>
+  </section>
+
   <!-- EGNE INITIATIVER: bygges af render.js ud fra projekter med egen: true -->
   <section id="egne-sektion" class="section">
     <h2>Initiativer og fællesskaber</h2>
@@ -175,6 +191,7 @@
 <script src="projekter.js"></script>
 <script src="render.js"></script>
 <script src="sprog.js"></script>
+<script src="ekstra.js"></script>
 <script>
   document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('.filters button').forEach(x => x.classList.toggle('on', x === b));

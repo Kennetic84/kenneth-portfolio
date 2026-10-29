@@ -7,6 +7,8 @@ const TEKSTER_EN = {
   "Ydelser": "Services",
   "Om": "About",
   "Kontakt": "Contact",
+  "Set fra toppen": "View from the top",
+  "Udsigten fra arbejdspladsen.": "The view from the office.",
   "Lys i bevægelse.<br>Teknik i højden.": "Light in motion.<br>Tech at height.",
   "Oplevelser og steder, der flytter folk, både fysisk og mentalt. Lystekniker, kinetisk lys og rope access, i Odense og ude i verden.":
     "Experiences and places that move people, physically and mentally. Lighting, kinetic lighting and rope access, in Odense and around the world.",
@@ -64,7 +66,9 @@ const ATTRIBUTTER_EN = {
   "DJ i lilla lys og røg til Odeology": "DJ in purple light and haze at Odeology",
   "Kenneth Danielsen med headset i lystårnet over en festivalscene": "Kenneth Danielsen with headset in the lighting tower above a festival stage",
   "Adgangskode": "Password",
-  "Filtrer projekter": "Filter projects"
+  "Filtrer projekter": "Filter projects",
+  "Udsigt fra højden: Orange Scene, Roskilde": "View from height: Orange Scene, Roskilde",
+  "Udsigt fra højden: SiteCover": "View from height: SiteCover"
 };
 
 (function () {

@@ -226,3 +226,21 @@ html.laast #laas { position: fixed; inset: 0; place-items: center; background: v
 
 .sprog { margin-left: 4px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: none; color: var(--fg); font-family: var(--mono); font-size: 12px; letter-spacing: .08em; cursor: pointer; }
 .sprog:hover, .sprog:focus-visible { border-color: var(--accent); color: var(--accent); }
+
+/* HØJDEMÅLER */
+.hoejde { position: fixed; top: 84px; bottom: 28px; right: 14px; width: 1px; z-index: 40; pointer-events: none; }
+.hoejde .reb { position: absolute; inset: 0; background: linear-gradient(var(--accent), rgba(255, 180, 58, .15)); opacity: .55; }
+.hoejde .lod { position: absolute; left: 0; width: 0; height: 0; }
+.hoejde .lod::before { content: ""; position: absolute; left: -4px; top: -4px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+.hoejde b { position: absolute; right: 12px; top: -9px; font: 400 11px/1 var(--mono); color: var(--accent); white-space: nowrap; letter-spacing: .06em; background: rgba(11, 11, 13, .7); padding: 3px 5px; border-radius: 4px; }
+.hoejde.nede .lod::before { background: var(--accent-2); box-shadow: 0 0 12px var(--accent-2); }
+.hoejde.nede b { color: var(--accent-2); }
+@media (max-width: 900px), (pointer: coarse) { .hoejde { display: none; } }
+
+/* SET FRA TOPPEN */
+.top-strip { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: thin; }
+.top-strip figure { flex: 0 0 auto; width: min(300px, 72vw); aspect-ratio: 3 / 4; margin: 0; position: relative; scroll-snap-align: start; border-radius: var(--radius); overflow: hidden; background: var(--bg-2); }
+.top-strip img { cursor: zoom-in; transition: transform .4s; }
+.top-strip figure:hover img { transform: scale(1.03); }
+.top-strip figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 12px 10px; font: 400 12px/1.3 var(--mono); color: var(--fg); background: linear-gradient(transparent, rgba(11, 11, 13, .85)); letter-spacing: .04em; }
+#toppen .lead { margin: -16px 0 28px; }
