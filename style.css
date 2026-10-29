@@ -223,3 +223,6 @@ html.laast #laas { position: fixed; inset: 0; place-items: center; background: v
 #laas form { display: grid; gap: 12px; width: min(320px, 100%); text-align: center; }
 #laas input { padding: 12px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-2); color: var(--fg); font: inherit; }
 #laas .fejl { color: var(--accent); margin: 0; }
+
+.sprog { margin-left: 4px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: none; color: var(--fg); font-family: var(--mono); font-size: 12px; letter-spacing: .08em; cursor: pointer; }
+.sprog:hover, .sprog:focus-visible { border-color: var(--accent); color: var(--accent); }

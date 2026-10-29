@@ -156,3 +156,84 @@ const PROJEKTER = [
     kategori: ["undervisning"], status: "tidligere"
   },
 ];
+
+/*
+  ENGELSK – oversættelser til den engelske version, slået op på "kunde".
+  Felter der mangler her, vises på dansk. udvalgt: samme rækkefølge som den danske liste.
+*/
+const ENGELSK = {
+  "DYNAMO": {
+    titel: "Workshop for circus and performance art",
+    rolle: "Venue and lighting design, production, technician and operator",
+    tekst: "Venue and lighting design, production, tech and show operation at DYNAMO, Odense's workshop for circus and performance art. DYNAMO received the Funen Culture Prize (Den Fynske Kulturpris) in 2019."
+  },
+  "Odeology": {
+    titel: "Where experimental music meets performance art",
+    rolle: "Co-founded the association in 2018 and have always run production. Now chairman",
+    tekst: "A space for electronic music and art in Odense, a safe place where experimental music meets performance art. I helped start Odeology in 2018 and have run production from day one: venue and lighting design, tech and show operation. Today I am also chairman of the association."
+  },
+  "Odense Teater": {
+    titel: "[Production, season]", rolle: "Lighting technician",
+    tekst: "Lighting for theatre productions: rigging, focus, setup and running shows. [Add productions.]"
+  },
+  "Odeon Odense": {
+    titel: "[Event]", rolle: "Lighting technician, concerts and events",
+    tekst: "Lighting for concerts and events at Odeon. [Add examples.]"
+  },
+  "SiteCover": {
+    titel: "The whole construction site under one roof", rolle: "Rigger in harness",
+    tekst: "SiteCover builds movable covers that put the entire construction site under a roof: steel structure and fabric with built-in cranes, so building work can continue in any weather. I work as a rigger in a harness on assembly and dismantling, high up on the steel and fabric."
+  },
+  "RT9 Scandinavian Rope Access": {
+    titel: "Rope access technician", rolle: "Rope access technician",
+    tekst: "IRATA-certified industrial rope access technician with RT9 since September 2024. [Typical tasks.]"
+  },
+  "Ignition House": {
+    rolle: "Owner and creative lead",
+    tekst: "My company. Project-based work in entertainment and experience technology: live shows, lighting, VJ, installations and project management. Including Uendelige Passager and Fællestival Pyramiden."
+  },
+  "Coworking Plus Odense": {
+    aar: "From 2014",
+    rolle: "Initiator, co-founder and co-owner. Later sold my share",
+    tekst: "Coworking space in central Odense with over 5,100 m² and 450+ workstations for startups, freelancers and growth companies. I started the place and built it up with a focus on design, construction, community, networking and events."
+  },
+  "Kulturklyngen": {
+    rolle: "Initiator and chairman",
+    tekst: "An initiative for cultural neighbourhoods in Odense. It brought the city's cultural creators together, physically and mentally, through political debates, workshops and events."
+  },
+  "WHITEvoid": {
+    rolle: "Kinetic lighting: technician, operator and service on installations and tours in Europe, the US and Asia",
+    udvalgt: [
+      ["London", "Construction, technician and service"],
+      ["12 cities from Dublin to Lisbon", "Technician and operator", "Bon Iver, European tour"],
+      ["Las Vegas", "Construction, technician, training and service. The largest permanent kinetic installation in the US, Muse Award 2020 (platinum)"],
+      ["Amsterdam", "Technician and operator"],
+      ["Sweden", "Programmer, operator and service"],
+      ["11 cities from Portland to Toronto", "Technician and operator", "Bon Iver, US and Canada tour"],
+      ["China tour", "Technician", "2047 Apologue, dir. Zhang Yimou"],
+      ["Shanghai", "Setup and operator"],
+      ["Frankfurt", "Production and setup"],
+      ["San Francisco", "Technician and operator"],
+      ["São Paulo", "Kinetic show production", "Luan Santana, Acoustic DVD show"],
+      ["Friedrichshafen", "Technician, programmer and service"],
+      ["New York", "Technician"]
+    ]
+  },
+  "PHONO Festival": {
+    titel: "Audiovisual electronic music",
+    rolle: "Venue and lighting design, production, technician and operator",
+    tekst: "Volunteer-run festival in Odense for experimental electronic music and light installations. Venues ranged from the old slaughterhouse on Rugårdsvej via Arkaden and FAF on Byens Ø to ULYS on Siloøen. Artists included Tony Allen, Holly Herndon, Robert Hood, Felix Kubin and Birdy Nam Nam. Funen Culture Prize 2012."
+  },
+  "Odense Internationale Musikteater": {
+    kunde: "Odense International Music Theatre",
+    rolle: "Construction, set design, projection mapping, operator and performer in Me We / Urban United"
+  },
+  "Bagjul": { rolle: "Stage technician: build, lighting design, programming, projection mapping and show operation" },
+  "Teater Momentum": { rolle: "Stage technician" },
+  "Urban Art Project (UAP)": { rolle: "Project manager, booker, lighting and sound for Odense Havnekulturfestival and the Undergrundsby festival" },
+  "Love Electron: Humachine": { rolle: "Creative lead and teacher on an interactive exhibition about humans and machines" },
+  "Erhvervsakademiet Lillebælt (EAL), Multimediedesign": {
+    kunde: "Business Academy Lillebaelt (EAL), Multimedia Design",
+    rolle: "Teacher, consultant and project manager, including interactive visuals with Odense Harbour Festival"
+  }
+};
