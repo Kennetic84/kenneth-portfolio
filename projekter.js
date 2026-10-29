@@ -37,8 +37,8 @@ const PROJEKTER = [
   },
   {
     kunde: "Odeology", titel: "Hvor eksperimenterende musik møder performancekunst", aar: "2018–", egen: true,
-    rolle: "Medstifter, booker og promotor. I dag formand for foreningen",
-    tekst: "Et rum for elektronisk musik og kunst i Odense, et trygt sted hvor eksperimenterende musik møder performancekunst. Jeg var med til at starte det i 2018 som booker og promotor og er i dag formand. Jeg står også for venue- og lysdesign, produktion og afvikling. Støttet af Ørenes Kunstfond, KODA Kultur, Statens Kunstfond og Odense Kommune.",
+    rolle: "Med til at starte foreningen i 2018 og har altid stået for produktionen. I dag formand",
+    tekst: "Et rum for elektronisk musik og kunst i Odense, et trygt sted hvor eksperimenterende musik møder performancekunst. Jeg var med til at starte Odeology i 2018 og har fra begyndelsen stået for produktionen: venue- og lysdesign, teknik og afvikling. I dag er jeg også formand for foreningen.",
     kategori: ["event", "lys"], status: "aktuel", fremhaevet: true, billede: "img/odeology-7.jpg",
     galleri: ["img/odeology-8.jpg", "img/odeology-9.jpg", "img/odeology-10.jpg", "img/odeology-11.jpg", "img/odeology-12.jpg", "img/odeology-13.jpg", "img/odeology-14.jpg", "img/odeology-15.jpg", "img/odeology-16.jpg", "img/odeology-17.jpg", "img/odeology-18.jpg", "img/odeology-19.jpg", "img/odeology-20.jpg", "img/odeology-21.jpg", "img/odeology-1.jpg", "img/odeology-2.jpg", "img/odeology-3.jpg", "img/odeology-4.jpg", "img/odeology-5.jpg", "img/odeology-6.jpg"],
     link: "https://www.odeology.dk/",
@@ -57,9 +57,9 @@ const PROJEKTER = [
     kategori: ["lys"], status: "aktuel", fremhaevet: true, billede: "img/odeon.jpg"
   },
   {
-    kunde: "SiteCover", titel: "Overdækninger i højden", aar: "2023–",
-    rolle: "Rope access-tekniker og montør",
-    tekst: "Montage af store midlertidige overdækninger over byggepladser: stålgitter, kranløft og dug, ofte højt over byen og i al slags vejr. Arbejde i tov, hvor lift ikke kan komme til.",
+    kunde: "SiteCover", titel: "Hele byggepladsen under tag", aar: "2023–",
+    rolle: "Montør i sele",
+    tekst: "SiteCover bygger flytbare overdækninger, der lægger hele byggepladsen under tag: stålkonstruktion og dug med indbyggede kraner, så byggeriet kan fortsætte i al slags vejr. Jeg arbejder som montør i sele på opbygning og nedtagning, højt oppe på stålet og dugen.",
     kategori: ["rope"], status: "aktuel", fremhaevet: true, billede: "img/sitecover-28.jpg",
     galleri: ["img/sitecover-video.mp4", "img/sitecover-1.jpg", "img/sitecover-29.jpg", "img/sitecover-30.jpg", "img/sitecover-2.jpg", "img/sitecover-3.jpg", "img/sitecover-4.jpg", "img/sitecover-5.jpg", "img/sitecover-6.jpg", "img/sitecover-7.jpg", "img/sitecover-8.jpg", "img/sitecover-9.jpg", "img/sitecover-10.jpg", "img/sitecover-11.jpg", "img/sitecover-12.jpg", "img/sitecover-13.jpg", "img/sitecover-14.jpg", "img/sitecover-15.jpg", "img/sitecover-16.jpg", "img/sitecover-17.jpg", "img/sitecover-18.jpg", "img/sitecover-19.jpg", "img/sitecover-20.jpg", "img/sitecover-21.jpg", "img/sitecover-22.jpg", "img/sitecover-23.jpg", "img/sitecover-24.jpg", "img/sitecover-25.jpg", "img/sitecover-26.jpg", "img/sitecover-27.jpg"]
   },
