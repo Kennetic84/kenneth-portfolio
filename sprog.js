@@ -8,10 +8,10 @@ const TEKSTER_EN = {
   "Om": "About",
   "Kontakt": "Contact",
   "Lys i bevægelse.<br>Teknik i højden.": "Light in motion.<br>Tech at height.",
-  "Jeg er Kenneth Danielsen. Jeg skaber oplevelser og steder, der flytter folk, både fysisk og mentalt. Jeg arbejder som lystekniker, med kinetisk lys og som rope access-tekniker, i Odense og ude i verden.":
-    "I'm Kenneth Danielsen. I create experiences and places that move people, physically and mentally. I work as a lighting technician, with kinetic lighting and as a rope access technician, in Odense and around the world.",
+  "Oplevelser og steder, der flytter folk, både fysisk og mentalt. Lystekniker, kinetisk lys og rope access, i Odense og ude i verden.":
+    "Experiences and places that move people, physically and mentally. Lighting, kinetic lighting and rope access, in Odense and around the world.",
   "Se projekter": "See projects",
-  "Book mig": "Hire me",
+  "Skriv til mig": "Get in touch",
   "Arbejder løbende for": "Currently working with",
   "Udvalgte projekter": "Selected projects",
   "Alle": "All",

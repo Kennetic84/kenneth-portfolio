@@ -48,6 +48,7 @@ const PROJEKTER = [
     kunde: "Odense Teater", titel: "[Forestilling, sæson]", aar: "[ÅR]–",
     rolle: "Lystekniker",
     tekst: "Lysteknik på forestillinger: rig, fokus, opsætning og afvikling. [Tilføj forestillinger.]",
+    link: "https://odenseteater.dk",
     kategori: ["lys"], status: "aktuel", fremhaevet: true, billede: ""
   },
   {
@@ -60,6 +61,7 @@ const PROJEKTER = [
     kunde: "SiteCover", titel: "Hele byggepladsen under tag", aar: "2023–",
     rolle: "Montør i sele",
     tekst: "SiteCover bygger flytbare overdækninger, der lægger hele byggepladsen under tag: stålkonstruktion og dug med indbyggede kraner, så byggeriet kan fortsætte i al slags vejr. Jeg arbejder som montør i sele på opbygning og nedtagning, højt oppe på stålet og dugen.",
+    link: "https://sitecover.dk",
     kategori: ["rope"], status: "aktuel", fremhaevet: true, billede: "img/sitecover-28.jpg",
     galleri: ["img/sitecover-video.mp4", "img/sitecover-1.jpg", "img/sitecover-29.jpg", "img/sitecover-30.jpg", "img/sitecover-2.jpg", "img/sitecover-3.jpg", "img/sitecover-4.jpg", "img/sitecover-5.jpg", "img/sitecover-6.jpg", "img/sitecover-7.jpg", "img/sitecover-8.jpg", "img/sitecover-9.jpg", "img/sitecover-10.jpg", "img/sitecover-11.jpg", "img/sitecover-12.jpg", "img/sitecover-13.jpg", "img/sitecover-14.jpg", "img/sitecover-15.jpg", "img/sitecover-16.jpg", "img/sitecover-17.jpg", "img/sitecover-18.jpg", "img/sitecover-19.jpg", "img/sitecover-20.jpg", "img/sitecover-21.jpg", "img/sitecover-22.jpg", "img/sitecover-23.jpg", "img/sitecover-24.jpg", "img/sitecover-25.jpg", "img/sitecover-26.jpg", "img/sitecover-27.jpg"]
   },
@@ -67,32 +69,36 @@ const PROJEKTER = [
     kunde: "RT9 Scandinavian Rope Access", titel: "Rope access-tekniker", aar: "2024–",
     rolle: "Rope access-tekniker",
     tekst: "IRATA-certificeret industriel rope access-tekniker hos RT9 siden september 2024. [Typiske opgaver.]",
+    link: "https://rt9.dk",
     kategori: ["rope"], status: "aktuel", fremhaevet: true, billede: ""
   },
   {
-    kunde: "ETP", titel: "[Opgave]", aar: "[ÅR]–",
-    rolle: "[Rolle]",
-    tekst: "[Hvad laver jeg for ETP?]",
-    kategori: [], status: "aktuel", billede: ""
+    kunde: "ETP", titel: "Festivalscener i højden", aar: "2025–",
+    rolle: "Rigning og konstruktion af scener",
+    tekst: "ETP (European Tour Production) lejer scener, tribuner og teknik ud til oplevelsesbranchen og har lavet projekter i ind- og udland siden 1994. Jeg står for rigning og konstruktion af deres scener på festivaler, bl.a. Orange Scene på Roskilde Festival, Musik i Lejet og Wonderfestiwall på Bornholm.",
+    link: "https://etp.nu",
+    kategori: ["rope", "event"], status: "aktuel", fremhaevet: true, stor: true,
+    billede: "img/etp-1.jpg",
+    galleri: ["img/etp-2.jpg", "img/etp-3.jpg", "img/etp-4.jpg", "img/etp-5.jpg", "img/etp-6.jpg", "img/etp-7.jpg", "img/etp-8.jpg", "img/etp-9.jpg", "img/etp-10.jpg"]
   },
 
   // ---- Egne initiativer ----
   {
     kunde: "Ignition House", aar: "2013–", egen: true, status: "aktuel",
-    rolle: "Ejer og kreativ leder",
-    tekst: "Min virksomhed. Projektbaseret arbejde inden for underholdnings- og oplevelsesteknologi: liveshows, lys, VJ, installationer og projektledelse. Bl.a. Uendelige Passager og Fællestival Pyramiden.",
+    rolle: "Ejer",
+    tekst: "Min enkeltmandsvirksomhed, som jeg tager opgaver igennem. Projektbaseret arbejde inden for underholdnings- og oplevelsesteknologi: liveshows, lys, VJ, installationer og projektledelse. Bl.a. Uendelige Passager og Fællestival Pyramiden.",
     kategori: []
   },
   {
     kunde: "Coworking Plus Odense", aar: "Fra 2014", egen: true, status: "tidligere",
     rolle: "Initiativtager, medstifter og medejer. Har siden solgt min andel",
-    tekst: "Kontorfællesskab i centrum af Odense med over 5.100 m² og 450+ arbejdspladser for startups, freelancere og vækstvirksomheder. Jeg startede stedet og byggede det op med fokus på design, byggeri, fællesskab, netværk og events.",
+    tekst: "Kontorfællesskab i centrum af Odense med over 5.100 m² og 450+ arbejdspladser for startups, freelancere og vækstvirksomheder. Jeg tog initiativ til stedet og var med til at bygge det op, med fokus på design, byggeri, fællesskab, netværk og events.",
     kategori: [], link: "https://coworkingplus.dk"
   },
   {
     kunde: "Kulturklyngen", aar: "[ÅR]–[ÅR]", egen: true, status: "tidligere",
     rolle: "Initiativtager og formand",
-    tekst: "Initiativet for kulturelle naboskaber i Odense. Skabte fysisk og mentalt naboskab mellem byens kulturskabere gennem politiske debatter, workshops og events.",
+    tekst: "Initiativet for kulturelle naboskaber i Odense. Samlede byens kulturskabere gennem politiske debatter, workshops og events.",
     kategori: []
   },
 
@@ -184,22 +190,26 @@ const ENGELSK = {
     titel: "The whole construction site under one roof", rolle: "Rigger in harness",
     tekst: "SiteCover builds movable covers that put the entire construction site under a roof: steel structure and fabric with built-in cranes, so building work can continue in any weather. I work as a rigger in a harness on assembly and dismantling, high up on the steel and fabric."
   },
+  "ETP": {
+    titel: "Festival stages at height", rolle: "Rigging and construction of stages",
+    tekst: "ETP (European Tour Production) rents out stages, grandstands and technical equipment to the events industry and has worked on projects in Denmark and abroad since 1994. I handle rigging and construction of their stages at festivals, including Orange Scene at Roskilde Festival, Musik i Lejet and Wonderfestiwall on Bornholm."
+  },
   "RT9 Scandinavian Rope Access": {
     titel: "Rope access technician", rolle: "Rope access technician",
     tekst: "IRATA-certified industrial rope access technician with RT9 since September 2024. [Typical tasks.]"
   },
   "Ignition House": {
-    rolle: "Owner and creative lead",
-    tekst: "My company. Project-based work in entertainment and experience technology: live shows, lighting, VJ, installations and project management. Including Uendelige Passager and Fællestival Pyramiden."
+    rolle: "Owner",
+    tekst: "My one-person company, which I take on work through. Project-based work in entertainment and experience technology: live shows, lighting, VJ, installations and project management. Including Uendelige Passager and Fællestival Pyramiden."
   },
   "Coworking Plus Odense": {
     aar: "From 2014",
     rolle: "Initiator, co-founder and co-owner. Later sold my share",
-    tekst: "Coworking space in central Odense with over 5,100 m² and 450+ workstations for startups, freelancers and growth companies. I started the place and built it up with a focus on design, construction, community, networking and events."
+    tekst: "Coworking space in central Odense with over 5,100 m² and 450+ workstations for startups, freelancers and growth companies. I took the initiative for the place and helped build it up, with a focus on design, construction, community, networking and events."
   },
   "Kulturklyngen": {
     rolle: "Initiator and chairman",
-    tekst: "An initiative for cultural neighbourhoods in Odense. It brought the city's cultural creators together, physically and mentally, through political debates, workshops and events."
+    tekst: "An initiative for cultural neighbourhoods in Odense. It brought the city's cultural creators together through political debates, workshops and events."
   },
   "WHITEvoid": {
     rolle: "Kinetic lighting: technician, operator and service on installations and tours in Europe, the US and Asia",
