@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kenneth Danielsen · Lys & rope access</title>
+  <meta name="description" content="Kenneth Danielsen, Ignition House, Odense. Lystekniker, kinetisk lys og rope access til teater, koncerter, events og installationer.">
+  <meta property="og:title" content="Kenneth Danielsen · Lys & rope access">
+  <meta property="og:description" content="Lystekniker og rope access-tekniker fra Odense. Ignition House.">
+  <meta property="og:image" content="img/og.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0b0d'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Arial' font-weight='900' font-size='28' text-anchor='middle' fill='%23ffb43a'%3EKD%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- ADGANGSKODE: midlertidig lås, mens siden er i test. Slet denne blok og #laas-blokken nederst for at åbne siden. -->
+  <script>
+    const KODE_HASH = "91fc273e2e72641f60d1d67e98305f1e9e4f3051d0616a453090539b05328a01";
+    try { if (localStorage.getItem("adgang") !== KODE_HASH) document.documentElement.classList.add("laast"); } catch (e) { document.documentElement.classList.add("laast"); }
+  </script>
+</head>
+<body>
+<div id="laas">
+  <form>
+    <p class="eyebrow">Kenneth Danielsen · under opbygning</p>
+    <input type="password" placeholder="Adgangskode" autocomplete="current-password" aria-label="Adgangskode">
+    <button class="btn" type="submit">Åbn</button>
+    <p class="fejl" hidden>Forkert kode</p>
+  </form>
+</div>
+<script>
+  document.querySelector("#laas form").addEventListener("submit", async e => {
+    e.preventDefault();
+    const tekst = e.target.querySelector("input").value;
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(tekst));
+    const hash = [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+    if (hash === KODE_HASH) { try { localStorage.setItem("adgang", hash); } catch (e) {} document.documentElement.classList.remove("laast"); }
+    else e.target.querySelector(".fejl").hidden = false;
+  });
+</script>
+
+<header class="nav">
+  <a class="logo" href="#top">KD<span>·</span>IH</a>
+  <nav>
+    <a href="#cases">Projekter</a>
+    <a href="#egne-sektion">Initiativer</a>
+    <a href="#historik">Historik</a>
+    <a href="#ydelser">Ydelser</a>
+    <a href="#om">Om</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO: skift til fuldskærmsbillede/video fra WHITEvoid eller Odeology -->
+  <section class="hero">
+    <div class="hero-media"><img class="media" src="img/odeology-hero.jpg" alt="DJ i lilla lys og røg til Odeology"></div>
+    <div class="hero-text">
+      <p class="eyebrow">Ignition House · Odense</p>
+      <h1>Lys i bevægelse.<br>Teknik i højden.</h1>
+      <p class="lead">Jeg er Kenneth Danielsen. Jeg skaber oplevelser og steder, der flytter folk, både fysisk og mentalt. Jeg arbejder som lystekniker, med kinetisk lys og som rope access-tekniker, i Odense og ude i verden.</p>
+      <div class="cta">
+        <a class="btn" href="#cases">Se projekter</a>
+        <a class="btn ghost" href="#kontakt">Book mig</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logostribe: bygges af render.js ud fra kunder med status "aktuel" -->
+  <section class="clients">
+    <p>Arbejder løbende for</p>
+    <ul id="clients"></ul>
+  </section>
+
+  <!-- CASES -->
+  <section id="cases" class="section">
+    <h2>Udvalgte projekter</h2>
+    <div class="filters" role="group" aria-label="Filtrer projekter">
+      <button class="on" data-f="alle">Alle</button>
+      <button data-f="lys">Lys</button>
+      <button data-f="rope">Rope access</button>
+      <button data-f="event">Events</button>
+    </div>
+
+    <!-- Kort bygges af render.js ud fra projekter med fremhaevet: true -->
+    <div class="grid" id="cards"></div>
+  </section>
+
+  <!-- EGNE INITIATIVER: bygges af render.js ud fra projekter med egen: true -->
+  <section id="egne-sektion" class="section">
+    <h2>Initiativer og fællesskaber</h2>
+    <p class="lead">Ud over opgaverne for andre har jeg været med til at starte og drive steder, fællesskaber og events i Odense.</p>
+    <div class="own-grid" id="egne"></div>
+  </section>
+
+  <!-- HISTORIK: bygges af render.js ud fra projekter med status "tidligere" -->
+  <section id="historik" class="section">
+    <h2>Historik</h2>
+    <p class="lead">Tidligere projekter og samarbejder.</p>
+    <ol class="history" id="history"></ol>
+  </section>
+
+  <!-- YDELSER -->
+  <section id="ydelser" class="section alt">
+    <h2>Det kan jeg hjælpe med</h2>
+    <div class="services">
+      <div>
+        <h3>Lysteknik</h3>
+        <p>Rig, fokus, programmering og afvikling til teater, koncerter og events.</p>
+      </div>
+      <div>
+        <h3>Kinetisk lys</h3>
+        <p>Montage og drift af bevægelige lysinstallationer, hvor mekanik, lys og tid spiller sammen.</p>
+      </div>
+      <div>
+        <h3>Rope access</h3>
+        <p>IRATA-certificeret industriel rope access-tekniker. Sikkert arbejde i højden: rigning, montage og serviceopgaver, hvor lift og stillads ikke rækker.</p>
+      </div>
+      <div>
+        <h3>Venue- og lysdesign</h3>
+        <p>Koncept, venue og lys til klubaftener, festivaler og scenekunst, fra PHONO Festival til Odeology og DYNAMO.</p>
+      </div>
+      <div>
+        <h3>VJ og projektionsmapping</h3>
+        <p>Visuals, projektion og interaktive installationer til shows og udstillinger.</p>
+      </div>
+      <div>
+        <h3>Produktion og projektledelse</h3>
+        <p>Fra idé til afvikling: planlægning, teknik, hold og drift. Jeg har også undervist i multimediedesign på EAL (UCL).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OM -->
+  <section id="om" class="section about">
+    <div class="portrait"><img class="media" src="img/portraet.jpg" alt="Kenneth Danielsen med headset i lystårnet over en festivalscene"></div>
+    <div>
+      <h2>Om mig</h2>
+      <p>Jeg har arbejdet med events, scener og lys siden 2007 og har drevet Ignition House fra Odense siden 2013. Mit arbejde ligger der, hvor lys, teknik og højder mødes: den ene dag fokuserer jeg lamper på en teaterscene, den næste hænger jeg i tov på en facade eller servicerer en kinetisk lysinstallation.</p>
+      <p>Jeg kom ind i kinetisk lys som praktikant hos WHITEvoid i 2012 og har siden arbejdet på installationer og turnéer i Europa, USA og Asien, bl.a. ABBA Voyage i London, Hakkasan i Las Vegas og Bon Ivers USA-turnéer. Hjemme i Odense har jeg været med til at bygge PHONO Festival, DYNAMO, Odeology, Coworking Plus og Kulturklyngen op.</p>
+      <p>Jeg kan lide opgaver, der kræver både præcision og overblik, og hvor resultatet er noget, folk faktisk oplever.</p>
+      <ul class="facts">
+        <li><b>Base</b> Odense, arbejder i hele landet og udlandet</li>
+        <li><b>Firma</b> Ignition House · CVR 34837538</li>
+        <li><b>Sprog</b> Dansk, engelsk</li>
+        <li><b>Uddannelse</b> Professionsbachelor i innovation og entrepreneurship og AP i IT-teknologi/elektronik, Erhvervsakademiet Lillebælt</li>
+        <li><b>Certifikat</b> IRATA industriel rope access</li>
+        <li><b>Priser</b> Den Fynske Kulturpris 2019 (DYNAMO) og 2012 (PHONO)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="section contact">
+    <h2>Lad os lave noget</h2>
+    <p class="lead">Skal du bruge en lystekniker, en ekstra mand i højden eller én til at få en installation til at bevæge sig? Skriv til mig.</p>
+    <div class="cta">
+      <a class="btn" href="mailto:kennethdanielsen@gmail.com">kennethdanielsen@gmail.com</a>
+      <!-- Telefon: indsæt nummer og fjern kommentaren <a class="btn ghost" href="tel:+45XXXXXXXX">+45 XX XX XX XX</a> -->
+    </div>
+    <ul class="social">
+      <li><a href="https://www.instagram.com/kenneth_danielsen/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/in/kenneth-danielsen-0575541a/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100054455170720" target="_blank" rel="noopener">Facebook</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Kenneth Danielsen · Ignition House · Odense · CVR 34837538</p>
+  <p class="credit">Foto bl.a. Hans Kristian Hannibal-Bach, Daniel Hjorth, Asbjørn Sand og MG Media</p>
+</footer>
+
+<script src="projekter.js"></script>
+<script src="render.js"></script>
+<script>
+  document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(x => x.classList.toggle('on', x === b));
+    const f = b.dataset.f;
+    document.querySelectorAll('.card').forEach(c => {
+      c.hidden = f !== 'alle' && !c.dataset.tags.split(' ').includes(f);
+    });
+  }));
+</script>
+</body>
+</html>
