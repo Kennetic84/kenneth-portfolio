@@ -92,7 +92,7 @@ const PROJEKTER = [
     kategori: []
   },
   {
-    kunde: "Coworking Plus Odense", aar: "Fra 2014", egen: true, status: "tidligere",
+    kunde: "Coworking Plus Odense", aar: "2014–2022", egen: true, status: "tidligere",
     rolle: "Initiativtager, medstifter og medejer. Har siden solgt min andel",
     tekst: "Kontorfællesskab i centrum af Odense med over 5.100 m² og 450+ arbejdspladser for startups, freelancere og vækstvirksomheder. Jeg tog initiativ til stedet og var med til at bygge det op, med fokus på design, byggeri, fællesskab, netværk og events.",
     billede: "img/coworking-1.jpg",
@@ -209,7 +209,7 @@ const ENGELSK = {
     tekst: "My one-person company, which I take on work through. Project-based work in entertainment and experience technology: live shows, lighting, VJ, installations and project management. Including Uendelige Passager and Fællestival Pyramiden."
   },
   "Coworking Plus Odense": {
-    aar: "From 2014",
+    aar: "2014–2022",
     rolle: "Initiator, co-founder and co-owner. Later sold my share",
     tekst: "Coworking space in central Odense with over 5,100 m² and 450+ workstations for startups, freelancers and growth companies. I took the initiative for the place and helped build it up, with a focus on design, construction, community, networking and events."
   },
