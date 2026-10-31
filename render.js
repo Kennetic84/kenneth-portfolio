@@ -5,8 +5,8 @@ const tegn = (function () {
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const vis = (id, html) => { const el = document.getElementById(id); el.innerHTML = html; return el; };
   const ORD = {
-    da: { afsluttet: "afsluttet", udvalgte: "Udvalgte opgaver", visBillede: "Vis billede", fra: "fra", forrige: "Forrige", naeste: "Næste", luk: "Luk" },
-    en: { afsluttet: "ended", udvalgte: "Selected work", visBillede: "Show image", fra: "from", forrige: "Previous", naeste: "Next", luk: "Close" }
+    da: { afsluttet: "afsluttet", udvalgte: "Udvalgte opgaver", visBillede: "Vis billede", fra: "fra", forrige: "Forrige", naeste: "Næste", luk: "Luk", tilbage: "← Alle projekter", seProjekt: "Se projektet", billeder: "billeder", naeste2: "Næste projekt" },
+    en: { afsluttet: "ended", udvalgte: "Selected work", visBillede: "Show image", fra: "from", forrige: "Previous", naeste: "Next", luk: "Close", tilbage: "← All projects", seProjekt: "View project", billeder: "images", naeste2: "Next project" }
   };
   let sprog = "da", ord = ORD.da;
 
@@ -83,6 +83,47 @@ const tegn = (function () {
     if (e.target.closest('a[href^="#"]')) document.querySelector('.filters [data-f="alle"]')?.click();
   });
 
+  // Projektside: #projekt/slug viser hele projektet med alle billeder i stort format
+  const side = document.createElement("section");
+  side.id = "projektside"; side.hidden = true;
+  document.querySelector("main").after(side);
+  const medSide = () => PROJ.filter(p => p.fremhaevet && p.billede);
+  const visSide = () => {
+    const m = location.hash.match(/^#projekt\/(.+)$/);
+    const p = m && medSide().find(x => slug(x.kunde) === decodeURIComponent(m[1]));
+    const var_aaben = !side.hidden;
+    if (!p) {
+      if (var_aaben) {
+        side.hidden = true; document.documentElement.classList.remove("side-aaben");
+        const el = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+        if (el) el.scrollIntoView({ behavior: "instant" }); else scrollTo({ top: 0, behavior: "instant" });
+      }
+      return;
+    }
+    const alle = [p.billede, ...(p.galleri || [])], liste = alle.join("|");
+    const ps = medSide(), nr = ps.indexOf(p), naeste = ps[(nr + 1) % ps.length];
+    side.innerHTML = `
+    <div class="ps-top"><a class="ps-back" href="#${esc(slug(p.kunde))}">${ord.tilbage}</a></div>
+    <header class="ps-head">
+      <p class="tag">${esc([f(p, "kunde"), aarTxt(p)].filter(Boolean).join(" · "))}</p>
+      <h1>${esc(ren(f(p, "titel")) || ren(f(p, "rolle")))}</h1>
+      ${ren(f(p, "titel")) ? `<p class="role">${esc(ren(f(p, "rolle")))}</p>` : ""}
+      <p class="lead">${esc(ren(f(p, "tekst")))}</p>
+      ${linkTil(p)}${udvalgt(p)}
+    </header>
+    <div class="ps-billeder">${alle.map((src, i) => erVideo(src)
+      ? `<figure><video src="${esc(src)}" controls muted playsinline loop preload="metadata"></video></figure>`
+      : `<figure${i === 0 ? ' class="foerste"' : ""}><img src="${esc(src)}" alt="${esc(f(p, "kunde"))} ${i + 1}" loading="${i < 3 ? "eager" : "lazy"}" data-galleri="${esc(liste)}" data-i="${i}"></figure>`).join("")}
+    </div>
+    <nav class="ps-nav">
+      <a href="#${esc(slug(p.kunde))}">${ord.tilbage}</a>
+      <a href="#projekt/${esc(slug(naeste.kunde))}">${ord.naeste2}: ${esc(f(naeste, "kunde"))} →</a>
+    </nav>`;
+    side.hidden = false; document.documentElement.classList.add("side-aaben");
+    scrollTo({ top: 0, behavior: "instant" });
+  };
+  addEventListener("hashchange", visSide);
+
   const aarTal = p => parseInt(String(p.aar).match(/\d{4}(?!.*\d{4})/)?.[0] || "9999", 10);
 
   return function (nytSprog) {
@@ -101,11 +142,12 @@ const tegn = (function () {
     const filter = document.querySelector(".filters button.on")?.dataset.f || "alle";
     vis("cards", PROJ.filter(p => p.fremhaevet).map(p => `
     <article class="card${p.stor ? " big" : ""}" id="${esc(slug(p.kunde))}" data-tags="${esc((p.kategori || []).join(" "))}"${filter !== "alle" && !(p.kategori || []).includes(filter) ? " hidden" : ""}>
-      <div class="ph" data-label="${esc(f(p, "kunde"))}">${p.billede ? `<img class="media" src="${esc(p.billede)}" alt="${esc(f(p, "kunde") + ": " + (ren(f(p, "titel")) || ren(f(p, "rolle"))))}" loading="lazy" data-galleri="${esc([p.billede, ...(p.galleri || [])].join("|"))}" data-i="0">` : ""}</div>${galleri(p)}
+      <div class="ph" data-label="${esc(f(p, "kunde"))}">${p.billede ? `<a href="#projekt/${esc(slug(p.kunde))}" aria-label="${ord.seProjekt}: ${esc(f(p, "kunde"))}"><img class="media" src="${esc(p.billede)}" alt="${esc(f(p, "kunde") + ": " + (ren(f(p, "titel")) || ren(f(p, "rolle"))))}" loading="lazy"></a>` : ""}</div>${galleri(p)}
       <div class="card-body">
         <p class="tag">${esc([f(p, "kunde"), aarTxt(p)].filter(Boolean).join(" · "))}</p>
-        <h3>${esc(ren(f(p, "titel")) || ren(f(p, "rolle")))}</h3>
+        <h3>${p.billede ? `<a href="#projekt/${esc(slug(p.kunde))}">${esc(ren(f(p, "titel")) || ren(f(p, "rolle")))}</a>` : esc(ren(f(p, "titel")) || ren(f(p, "rolle")))}</h3>
         <p>${esc(ren(f(p, "tekst")))}</p>${udvalgt(p)}
+        ${p.billede ? `<a class="mere" href="#projekt/${esc(slug(p.kunde))}">${ord.seProjekt} · ${1 + (p.galleri?.length || 0)} ${ord.billeder} →</a>` : ""}
         ${linkTil(p)}
       </div>
     </article>`).join(""));
@@ -124,5 +166,6 @@ const tegn = (function () {
       `<li><span class="yr">${esc(aarTxt(p))}</span><span class="who">${esc(f(p, "kunde"))}</span><span class="what">${esc(ren(f(p, "rolle")))}${p.udvalgt?.length ? `
       <details><summary>${ord.udvalgte} (${p.udvalgt.length})</summary>${udvalgt(p)}</details>` : ""}</span></li>`).join(""));
     document.getElementById("historik").hidden = tidligere.length === 0;
+    if (location.hash.startsWith("#projekt/")) visSide();
   };
 })();
