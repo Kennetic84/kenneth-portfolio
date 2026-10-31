@@ -93,7 +93,7 @@ const PROJEKTER = [
   },
   {
     kunde: "Coworking Plus Odense", aar: "2014–2022", egen: true, status: "tidligere",
-    rolle: "Initiativtager, medstifter og medejer. Har siden solgt min andel",
+    rolle: "Initiativtager, medstifter og medejer frem til 2022, hvor jeg solgte min andel. Stedet kører videre",
     tekst: "Kontorfællesskab i centrum af Odense med over 5.100 m² og 450+ arbejdspladser for startups, freelancere og vækstvirksomheder. Jeg tog initiativ til stedet og var med til at bygge det op, med fokus på design, byggeri, fællesskab, netværk og events.",
     billede: "img/coworking-1.jpg",
     galleri: ["img/coworking-2.jpg", "img/coworking-3.jpg", "img/coworking-4.jpg", "img/coworking-5.jpg", "img/coworking-6.jpg", "img/coworking-7.jpg", "img/coworking-8.jpg", "img/coworking-9.jpg", "img/coworking-10.jpg", "img/coworking-11.jpg", "img/coworking-12.jpg", "img/coworking-13.jpg", "img/coworking-14.jpg", "img/coworking-15.jpg", "img/coworking-16.jpg", "img/coworking-17.jpg"],
@@ -210,7 +210,7 @@ const ENGELSK = {
   },
   "Coworking Plus Odense": {
     aar: "2014–2022",
-    rolle: "Initiator, co-founder and co-owner. Later sold my share",
+    rolle: "Initiator, co-founder and co-owner until 2022, when I sold my share. The place is still going",
     tekst: "Coworking space in central Odense with over 5,100 m² and 450+ workstations for startups, freelancers and growth companies. I took the initiative for the place and helped build it up, with a focus on design, construction, community, networking and events."
   },
   "Kulturklyngen": {

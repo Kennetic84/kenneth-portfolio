@@ -155,7 +155,7 @@ const tegn = (function () {
     vis("egne", PROJ.filter(p => p.egen).map(p => `
     <div class="own"${p.fremhaevet ? "" : ` id="${esc(slug(p.kunde))}"`}>
       ${p.billede ? `<a class="own-ph" href="#projekt/${esc(slug(p.kunde))}" aria-label="${ord.seProjekt}: ${esc(f(p, "kunde"))}"><img src="${esc(p.billede)}" alt="${esc(f(p, "kunde"))}" loading="lazy"></a>` : ""}
-      <p class="tag">${esc([aarTxt(p), p.status === "tidligere" ? ord.afsluttet : ""].filter(Boolean).join(" · "))}</p>
+      <p class="tag">${esc([aarTxt(p), p.status === "tidligere" && !/–\s*\d{4}/.test(aarTxt(p)) ? ord.afsluttet : ""].filter(Boolean).join(" · "))}</p>
       <h3>${p.billede ? `<a href="#projekt/${esc(slug(p.kunde))}">${esc(f(p, "kunde"))}</a>` : esc(f(p, "kunde"))}</h3>
       <p class="role">${esc(ren(f(p, "rolle")))}</p>
       <p>${esc(ren(f(p, "tekst")))}</p>
