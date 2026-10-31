@@ -170,6 +170,12 @@ footer { border-top: 1px solid var(--line); padding: 28px; text-align: center; c
 .own .role { color: var(--accent); font-size: 14px; margin: 0 0 10px; }
 .own p { margin: 0; color: #cfccc4; font-size: 15px; }
 .own .tag { margin-bottom: 6px; }
+.own-ph { display: block; aspect-ratio: 4 / 3; overflow: hidden; margin: 0 0 16px; background: #111; }
+.own-ph img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.own-ph:hover img { transform: scale(1.03); }
+.own h3 a { color: inherit; text-decoration: none; }
+.own h3 a:hover { color: var(--accent); }
+.own .mere { display: inline-block; margin-top: 12px; }
 
 .history details { margin-top: 10px; }
 .history summary { cursor: pointer; color: var(--accent-2); font-family: var(--mono); font-size: 13px; }

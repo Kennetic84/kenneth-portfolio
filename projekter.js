@@ -87,18 +87,24 @@ const PROJEKTER = [
     kunde: "Ignition House", aar: "2013–", egen: true, status: "aktuel",
     rolle: "Ejer",
     tekst: "Min enkeltmandsvirksomhed, som jeg tager opgaver igennem. Projektbaseret arbejde inden for underholdnings- og oplevelsesteknologi: liveshows, lys, VJ, installationer og projektledelse. Bl.a. Uendelige Passager og Fællestival Pyramiden.",
+    billede: "img/ignition-2.jpg",
+    galleri: ["img/ignition-1.jpg", "img/ignition-3.jpg", "img/ignition-4.jpg", "img/ignition-5.jpg", "img/ignition-6.jpg", "img/ignition-7.jpg", "img/ignition-8.jpg", "img/ignition-9.jpg", "img/ignition-10.jpg", "img/ignition-11.jpg", "img/ignition-12.jpg", "img/ignition-13.jpg", "img/ignition-14.jpg", "img/ignition-15.jpg", "img/ignition-16.jpg", "img/ignition-17.jpg", "img/ignition-18.jpg", "img/ignition-19.jpg", "img/ignition-20.jpg"],
     kategori: []
   },
   {
     kunde: "Coworking Plus Odense", aar: "Fra 2014", egen: true, status: "tidligere",
     rolle: "Initiativtager, medstifter og medejer. Har siden solgt min andel",
     tekst: "Kontorfællesskab i centrum af Odense med over 5.100 m² og 450+ arbejdspladser for startups, freelancere og vækstvirksomheder. Jeg tog initiativ til stedet og var med til at bygge det op, med fokus på design, byggeri, fællesskab, netværk og events.",
+    billede: "img/coworking-1.jpg",
+    galleri: ["img/coworking-2.jpg", "img/coworking-3.jpg", "img/coworking-4.jpg", "img/coworking-5.jpg", "img/coworking-6.jpg", "img/coworking-7.jpg", "img/coworking-8.jpg", "img/coworking-9.jpg", "img/coworking-10.jpg", "img/coworking-11.jpg", "img/coworking-12.jpg", "img/coworking-13.jpg", "img/coworking-14.jpg", "img/coworking-15.jpg", "img/coworking-16.jpg", "img/coworking-17.jpg"],
     kategori: [], link: "https://coworkingplus.dk"
   },
   {
     kunde: "Kulturklyngen", aar: "[ÅR]–[ÅR]", egen: true, status: "tidligere",
     rolle: "Initiativtager og formand",
     tekst: "Initiativet for kulturelle naboskaber i Odense. Samlede byens kulturskabere gennem politiske debatter, workshops og events.",
+    billede: "img/kulturklyngen-1.jpg",
+    galleri: ["img/kulturklyngen-2.jpg", "img/kulturklyngen-3.jpg", "img/kulturklyngen-4.jpg", "img/kulturklyngen-5.jpg", "img/kulturklyngen-6.jpg", "img/kulturklyngen-7.jpg", "img/kulturklyngen-8.jpg", "img/kulturklyngen-9.jpg", "img/kulturklyngen-10.jpg", "img/kulturklyngen-11.jpg", "img/kulturklyngen-12.jpg", "img/kulturklyngen-13.jpg", "img/kulturklyngen-14.jpg"],
     kategori: []
   },
 

@@ -87,7 +87,7 @@ const tegn = (function () {
   const side = document.createElement("section");
   side.id = "projektside"; side.hidden = true;
   document.querySelector("main").after(side);
-  const medSide = () => PROJ.filter(p => p.fremhaevet && p.billede);
+  const medSide = () => [...PROJ.filter(p => p.fremhaevet && p.billede), ...PROJ.filter(p => p.egen && !p.fremhaevet && p.billede)];
   const visSide = () => {
     const m = location.hash.match(/^#projekt\/(.+)$/);
     const p = m && medSide().find(x => slug(x.kunde) === decodeURIComponent(m[1]));
@@ -153,11 +153,13 @@ const tegn = (function () {
     </article>`).join(""));
 
     vis("egne", PROJ.filter(p => p.egen).map(p => `
-    <div class="own">
+    <div class="own"${p.fremhaevet ? "" : ` id="${esc(slug(p.kunde))}"`}>
+      ${p.billede ? `<a class="own-ph" href="#projekt/${esc(slug(p.kunde))}" aria-label="${ord.seProjekt}: ${esc(f(p, "kunde"))}"><img src="${esc(p.billede)}" alt="${esc(f(p, "kunde"))}" loading="lazy"></a>` : ""}
       <p class="tag">${esc([aarTxt(p), p.status === "tidligere" ? ord.afsluttet : ""].filter(Boolean).join(" · "))}</p>
-      <h3>${esc(f(p, "kunde"))}</h3>
+      <h3>${p.billede ? `<a href="#projekt/${esc(slug(p.kunde))}">${esc(f(p, "kunde"))}</a>` : esc(f(p, "kunde"))}</h3>
       <p class="role">${esc(ren(f(p, "rolle")))}</p>
       <p>${esc(ren(f(p, "tekst")))}</p>
+      ${p.billede ? `<a class="mere" href="#projekt/${esc(slug(p.kunde))}">${ord.seProjekt} · ${1 + (p.galleri?.length || 0)} ${ord.billeder} →</a>` : ""}
       ${linkTil(p)}
     </div>`).join(""));
 
