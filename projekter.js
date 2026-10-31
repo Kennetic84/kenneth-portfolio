@@ -39,8 +39,8 @@ const PROJEKTER = [
     kunde: "Odeology", titel: "Hvor eksperimenterende musik møder performancekunst", aar: "2018–", egen: true,
     rolle: "Med til at starte foreningen i 2018 og har altid stået for produktionen. I dag formand",
     tekst: "Et rum for elektronisk musik og kunst i Odense, et trygt sted hvor eksperimenterende musik møder performancekunst. Jeg var med til at starte Odeology i 2018 og har fra begyndelsen stået for produktionen: venue- og lysdesign, teknik og afvikling. I dag er jeg også formand for foreningen.",
-    kategori: ["event", "lys"], status: "aktuel", fremhaevet: true, billede: "img/odeology-7.jpg",
-    galleri: ["img/odeology-22.jpg", "img/odeology-23.jpg", "img/odeology-24.jpg", "img/odeology-25.jpg", "img/odeology-26.jpg", "img/odeology-27.jpg", "img/odeology-28.jpg", "img/odeology-29.jpg", "img/odeology-30.jpg", "img/odeology-31.jpg", "img/odeology-32.jpg", "img/odeology-33.jpg", "img/odeology-34.jpg", "img/odeology-35.jpg", "img/odeology-8.jpg", "img/odeology-9.jpg", "img/odeology-10.jpg", "img/odeology-11.jpg", "img/odeology-12.jpg", "img/odeology-13.jpg", "img/odeology-14.jpg", "img/odeology-15.jpg", "img/odeology-16.jpg", "img/odeology-17.jpg", "img/odeology-18.jpg", "img/odeology-19.jpg", "img/odeology-20.jpg", "img/odeology-21.jpg", "img/odeology-1.jpg", "img/odeology-2.jpg", "img/odeology-3.jpg", "img/odeology-4.jpg", "img/odeology-5.jpg", "img/odeology-6.jpg"],
+    kategori: ["event", "lys"], status: "aktuel", fremhaevet: true, billede: "img/odeology-25.jpg",
+    galleri: ["img/odeology-22.jpg", "img/odeology-7.jpg", "img/odeology-23.jpg", "img/odeology-24.jpg", "img/odeology-26.jpg", "img/odeology-27.jpg", "img/odeology-28.jpg", "img/odeology-29.jpg", "img/odeology-30.jpg", "img/odeology-31.jpg", "img/odeology-32.jpg", "img/odeology-33.jpg", "img/odeology-34.jpg", "img/odeology-35.jpg", "img/odeology-8.jpg", "img/odeology-9.jpg", "img/odeology-10.jpg", "img/odeology-11.jpg", "img/odeology-12.jpg", "img/odeology-13.jpg", "img/odeology-14.jpg", "img/odeology-15.jpg", "img/odeology-16.jpg", "img/odeology-17.jpg", "img/odeology-18.jpg", "img/odeology-19.jpg", "img/odeology-20.jpg", "img/odeology-21.jpg", "img/odeology-1.jpg", "img/odeology-2.jpg", "img/odeology-3.jpg", "img/odeology-4.jpg", "img/odeology-5.jpg", "img/odeology-6.jpg", "img/odeology-36.jpg", "img/odeology-37.jpg", "img/odeology-38.jpg", "img/odeology-39.jpg", "img/odeology-40.jpg", "img/odeology-41.jpg", "img/odeology-42.jpg", "img/odeology-43.jpg", "img/odeology-44.jpg", "img/odeology-45.jpg", "img/odeology-46.jpg", "img/odeology-47.jpg", "img/odeology-48.jpg", "img/odeology-49.jpg", "img/odeology-50.jpg", "img/odeology-51.jpg", "img/odeology-52.jpg", "img/odeology-53.jpg", "img/odeology-54.jpg", "img/odeology-55.jpg", "img/odeology-56.jpg", "img/odeology-57.jpg", "img/odeology-58.jpg", "img/odeology-59.jpg", "img/odeology-60.jpg", "img/odeology-61.jpg"],
     link: "https://www.odeology.dk/",
     instagram: "https://www.instagram.com/odeologyodense/"
   },
@@ -63,7 +63,7 @@ const PROJEKTER = [
     tekst: "SiteCover bygger flytbare overdækninger, der lægger hele byggepladsen under tag: stålkonstruktion og dug med indbyggede kraner, så byggeriet kan fortsætte i al slags vejr. Jeg arbejder som montør i sele på opbygning og nedtagning, højt oppe på stålet og dugen.",
     link: "https://sitecover.dk",
     kategori: ["rope"], status: "aktuel", fremhaevet: true, billede: "img/sitecover-28.jpg",
-    galleri: ["img/sitecover-video.mp4", "img/sitecover-1.jpg", "img/sitecover-29.jpg", "img/sitecover-30.jpg", "img/sitecover-2.jpg", "img/sitecover-3.jpg", "img/sitecover-4.jpg", "img/sitecover-5.jpg", "img/sitecover-6.jpg", "img/sitecover-7.jpg", "img/sitecover-8.jpg", "img/sitecover-9.jpg", "img/sitecover-10.jpg", "img/sitecover-11.jpg", "img/sitecover-12.jpg", "img/sitecover-13.jpg", "img/sitecover-14.jpg", "img/sitecover-15.jpg", "img/sitecover-16.jpg", "img/sitecover-17.jpg", "img/sitecover-18.jpg", "img/sitecover-19.jpg", "img/sitecover-20.jpg", "img/sitecover-21.jpg", "img/sitecover-22.jpg", "img/sitecover-23.jpg", "img/sitecover-24.jpg", "img/sitecover-25.jpg", "img/sitecover-26.jpg", "img/sitecover-27.jpg"]
+    galleri: ["img/sitecover-video.mp4", "img/sitecover-10.jpg", "img/sitecover-2.jpg", "img/sitecover-30.jpg", "img/sitecover-4.jpg", "img/sitecover-3.jpg", "img/sitecover-5.jpg", "img/sitecover-1.jpg", "img/sitecover-6.jpg", "img/sitecover-7.jpg", "img/sitecover-8.jpg", "img/sitecover-9.jpg", "img/sitecover-11.jpg", "img/sitecover-12.jpg", "img/sitecover-13.jpg", "img/sitecover-14.jpg", "img/sitecover-16.jpg", "img/sitecover-17.jpg", "img/sitecover-15.jpg", "img/sitecover-18.jpg", "img/sitecover-19.jpg", "img/sitecover-20.jpg", "img/sitecover-29.jpg", "img/sitecover-21.jpg", "img/sitecover-22.jpg", "img/sitecover-23.jpg", "img/sitecover-24.jpg", "img/sitecover-25.jpg", "img/sitecover-26.jpg", "img/sitecover-27.jpg"]
   },
   {
     kunde: "RT9 Scandinavian Rope Access", titel: "Rope access-tekniker", aar: "2024–",
@@ -78,8 +78,8 @@ const PROJEKTER = [
     tekst: "ETP (European Tour Production) lejer scener, tribuner og teknik ud til oplevelsesbranchen og har lavet projekter i ind- og udland siden 1994. Jeg står for rigning og konstruktion af deres scener på festivaler, bl.a. Orange Scene på Roskilde Festival, Musik i Lejet og Wonderfestiwall på Bornholm.",
     link: "https://etp.nu",
     kategori: ["rope", "event"], status: "aktuel", fremhaevet: true, stor: true,
-    billede: "img/etp-1.jpg",
-    galleri: ["img/etp-2.jpg", "img/etp-3.jpg", "img/etp-4.jpg", "img/etp-5.jpg", "img/etp-6.jpg", "img/etp-7.jpg", "img/etp-8.jpg", "img/etp-9.jpg", "img/etp-10.jpg"]
+    billede: "img/etp-5.jpg",
+    galleri: ["img/etp-3.jpg", "img/etp-1.jpg", "img/etp-2.jpg", "img/etp-4.jpg", "img/etp-6.jpg", "img/etp-7.jpg", "img/etp-8.jpg", "img/etp-9.jpg", "img/etp-10.jpg"]
   },
 
   // ---- Egne initiativer ----
@@ -129,7 +129,7 @@ const PROJEKTER = [
     rolle: "Venue- og lysdesign, produktion, tekniker og operatør",
     tekst: "Frivilligt drevet festival i Odense for eksperimenterende elektronisk musik og lysinstallationer. Spillesteder fra det gamle slagteri på Rugårdsvej over Arkaden og FAF på Byens Ø til ULYS på Siloøen. Artister som Tony Allen, Holly Herndon, Robert Hood, Felix Kubin og Birdy Nam Nam. Den Fynske Kulturpris 2012.",
     kategori: ["lys", "event"], status: "tidligere", fremhaevet: true, stor: true, billede: "img/phono-27.jpg",
-    galleri: ["img/phono-30.jpg", "img/phono-6.jpg", "img/phono-8.jpg", "img/phono-9.jpg", "img/phono-10.jpg", "img/phono-11.jpg", "img/phono-12.jpg", "img/phono-13.jpg", "img/phono-14.jpg", "img/phono-15.jpg", "img/phono-16.jpg", "img/phono-17.jpg", "img/phono-18.jpg", "img/phono-19.jpg", "img/phono-20.jpg", "img/phono-21.jpg", "img/phono-22.jpg", "img/phono-23.jpg", "img/phono-24.jpg", "img/phono-25.jpg", "img/phono-26.jpg", "img/phono-28.jpg", "img/phono-29.jpg", "img/phono-3.jpg", "img/phono-4.jpg", "img/phono-5.jpg", "img/phono-2.jpg"]
+    galleri: ["img/phono-30.jpg", "img/phono-8.jpg", "img/phono-6.jpg", "img/phono-9.jpg", "img/phono-10.jpg", "img/phono-11.jpg", "img/phono-12.jpg", "img/phono-13.jpg", "img/phono-14.jpg", "img/phono-15.jpg", "img/phono-16.jpg", "img/phono-17.jpg", "img/phono-18.jpg", "img/phono-20.jpg", "img/phono-21.jpg", "img/phono-22.jpg", "img/phono-23.jpg", "img/phono-24.jpg", "img/phono-25.jpg", "img/phono-26.jpg", "img/phono-29.jpg", "img/phono-3.jpg"]
   },
   {
     kunde: "Odense Internationale Musikteater", aar: "2010",
